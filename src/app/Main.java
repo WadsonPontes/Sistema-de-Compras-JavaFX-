@@ -16,7 +16,7 @@ public class Main extends Application {
 			
 			BorderPane root = (BorderPane) loader.load();
 			Scene scene = new Scene(root, 900, 500);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("css/application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Sistema do Wadson");
 			primaryStage.show();
