@@ -9,6 +9,7 @@ import java.util.Set;
 import app.enums.TipoFormaPagamento;
 import app.models.produto.Mostruario;
 // import app.views.Erro;
+import app.models.compra.*;
 import app.models.produto.Produto;
 
 public class Comprador extends Pessoa {

@@ -8,6 +8,7 @@ import java.util.Set;
 
 import app.enums.TipoFormaPagamento;
 // import app.views.Erro;
+import app.models.compra.*;
 import app.models.produto.Mostruario;
 
 public class Vendedor extends Pessoa {
