@@ -15,7 +15,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Label layoutX="387.0" layoutY="47.0" text="Listagem">
+            <Label layoutX="387.0" layoutY="47.0" text="Listar">
                <font>
                   <Font size="30.0" />
                </font>
