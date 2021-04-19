@@ -12,13 +12,13 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("views/TelaPrincipal.fxml"));
+			loader.setLocation(getClass().getResource("views/TelaMenuPrincipal.fxml"));
 			
 			BorderPane root = (BorderPane) loader.load();
 			Scene scene = new Scene(root, 900, 500);
 			scene.getStylesheets().add(getClass().getResource("css/application.css").toExternalForm());
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Sistema do Wadson");
+			primaryStage.setTitle("Sistema de Compras de Wadson Pontes");
 			primaryStage.show();
 		} catch(Exception e) {
 			e.printStackTrace();
