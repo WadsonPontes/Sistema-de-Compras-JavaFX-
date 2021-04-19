@@ -6,7 +6,7 @@ import javafx.scene.input.MouseEvent;
 
 import app.utils.CenaUtil;
 
-public class CadastroController {
+public class ListagemController {
 	@FXML
     private Button botaoComprador;
 	
@@ -21,17 +21,17 @@ public class CadastroController {
 	
 	@FXML
     void botaoCompradorClicado(MouseEvent event) {
-		CenaUtil.trocarCena(botaoComprador, getClass(), "/app/views/TelaCadastroComprador.fxml");
+		CenaUtil.trocarCena(botaoComprador, getClass(), "/app/views/TelaListagemComprador.fxml");
 	}
 	
 	@FXML
     void botaoVendedorClicado(MouseEvent event) {
-		CenaUtil.trocarCena(botaoVendedor, getClass(), "/app/views/TelaCadastroVendedor.fxml");
+		CenaUtil.trocarCena(botaoVendedor, getClass(), "/app/views/TelaListagemVendedor.fxml");
 	}
 	
 	@FXML
     void botaoProdutoClicado(MouseEvent event) {
-		CenaUtil.trocarCena(botaoProduto, getClass(), "/app/views/TelaCadastroProduto.fxml");
+		CenaUtil.trocarCena(botaoProduto, getClass(), "/app/views/TelaListagemProduto.fxml");
 	}
 
     @FXML

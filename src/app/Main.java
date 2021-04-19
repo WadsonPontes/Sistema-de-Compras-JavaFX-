@@ -1,5 +1,6 @@
 package app;
 	
+import app.controllers.Sistema;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
@@ -11,12 +12,15 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			Sistema.inicializar();
+			
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(getClass().getResource("views/TelaMenuPrincipal.fxml"));
+			loader.setLocation(getClass().getResource("/app/views/TelaMenuPrincipal.fxml"));
 			
 			BorderPane root = (BorderPane) loader.load();
 			Scene scene = new Scene(root, 900, 500);
-			scene.getStylesheets().add(getClass().getResource("css/application.css").toExternalForm());
+			scene.getStylesheets().add(getClass().getResource("/app/css/app.css").toExternalForm());
+			
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Sistema de Compras de Wadson Pontes");
 			primaryStage.show();
