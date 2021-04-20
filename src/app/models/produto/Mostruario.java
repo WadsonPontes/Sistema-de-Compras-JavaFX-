@@ -40,7 +40,7 @@ public class Mostruario extends Base implements IMostruario {
 	}
 	
 	public boolean equals(Mostruario obj) {
-		return this.codigo == obj.codigo;
+		return this.codigo.equals(obj.codigo);
 	}
     
     public int hashCode() {

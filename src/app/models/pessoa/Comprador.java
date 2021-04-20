@@ -96,7 +96,7 @@ public class Comprador extends Pessoa {
 	}
 	
 	public boolean equals(Comprador obj) {
-		return this.cpf == obj.cpf;
+		return this.cpf.equals(obj.cpf);
 	}
     
     public int hashCode() {

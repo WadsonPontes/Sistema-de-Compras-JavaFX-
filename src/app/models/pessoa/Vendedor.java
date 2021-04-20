@@ -72,7 +72,7 @@ public class Vendedor extends Pessoa {
 	}
 	
 	public boolean equals(Vendedor obj) {
-		return this.cnpj == obj.cnpj;
+		return this.cnpj.equals(obj.cnpj);
 	}
     
     public int hashCode() {

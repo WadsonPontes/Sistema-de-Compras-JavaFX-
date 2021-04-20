@@ -2,15 +2,22 @@ package app.controllers;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.*;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
 
 import app.models.pessoa.Comprador;
 import app.utils.CenaUtil;
@@ -26,6 +33,24 @@ public class ListagemCompradorController implements Initializable {
 	
 	@FXML
     private Button botaoVoltar;
+	
+	@FXML
+    void buscar(ActionEvent event) {
+		Set<Comprador> filtrado = new HashSet<Comprador>(Sistema.compradores);
+		
+		if (!campoBusca.getText().equals("")) {
+			filtrado.removeIf(x -> !x.cpf.contains(campoBusca.getText()));
+		}
+		
+		compradores = FXCollections.observableArrayList(filtrado);
+		listagem.setItems(compradores);
+	}
+	
+	@FXML
+    void clicouNaListagem(MouseEvent event) {
+		CenaUtil.trocarCena(botaoVoltar, getClass(), "/app/views/TelaDadosComprador.fxml");
+        System.out.println("clicked on " + listagem.getSelectionModel().getSelectedItem());
+    }
 
     @FXML
     void botaoVoltarClicado(MouseEvent event) {
