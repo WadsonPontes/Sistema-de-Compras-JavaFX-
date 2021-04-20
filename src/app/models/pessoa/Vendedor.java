@@ -13,9 +13,9 @@ import app.models.produto.Mostruario;
 
 public class Vendedor extends Pessoa {
 	public String cnpj;
-	private double a_receber;
-	private Set<Mostruario> produtos;
-	private List<Compra> vendas;
+	public double a_receber;
+	public Set<Mostruario> produtos;
+	public List<Compra> vendas;
 	
 	public Vendedor(String nome, String cnpj) {
 		super(nome);
@@ -92,4 +92,36 @@ public class Vendedor extends Pessoa {
     	
     	return t;
     }
+
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
+	}
+
+	public double getA_receber() {
+		return a_receber;
+	}
+
+	public void setA_receber(double a_receber) {
+		this.a_receber = a_receber;
+	}
+
+	public Set<Mostruario> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(Set<Mostruario> produtos) {
+		this.produtos = produtos;
+	}
+
+	public List<Compra> getVendas() {
+		return vendas;
+	}
+
+	public void setVendas(List<Compra> vendas) {
+		this.vendas = vendas;
+	}
 }

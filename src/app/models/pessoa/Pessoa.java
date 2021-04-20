@@ -4,8 +4,8 @@ import app.models.Base;
 import app.utils.Serial;
 
 public class Pessoa extends Base {
-	protected String nome;
-	protected double saldo;
+	public String nome;
+	public double saldo;
 	
 	public Pessoa(String nome) {
 		this.nome = nome;

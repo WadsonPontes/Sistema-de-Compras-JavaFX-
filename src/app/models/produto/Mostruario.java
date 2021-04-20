@@ -6,11 +6,43 @@ import app.models.Base;
 import app.utils.Serial;
 
 public class Mostruario extends Base implements IMostruario {
-	protected String codigo;
-	protected String nome;
-	protected double preco;
+	public String codigo;
+	public String nome;
+	public double preco;
 	public int quantidade;
 	
+	public String getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public double getPreco() {
+		return preco;
+	}
+
+	public void setPreco(double preco) {
+		this.preco = preco;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
+	}
+
 	public Mostruario() {
 		
 	}

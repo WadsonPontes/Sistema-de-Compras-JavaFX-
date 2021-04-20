@@ -14,8 +14,8 @@ import app.models.produto.Produto;
 
 public class Comprador extends Pessoa {
 	public String cpf;
-	private double a_pagar;
-	private List<Compra> compras;
+	public double a_pagar;
+	public List<Compra> compras;
 	public Set<Produto> sacola;
 	
 	public Comprador(String nome, String cpf) {
@@ -34,6 +34,24 @@ public class Comprador extends Pessoa {
         this.a_pagar = 0;
         this.compras = new ArrayList<Compra>();
         this.sacola = new HashSet<Produto>();
+    }
+	
+	public Comprador(String nome, String cpf, double saldo, Set<Produto> sacola) {
+		super(nome, saldo);
+        this.nome = nome;
+        this.cpf = cpf;
+        this.a_pagar = 0;
+        this.compras = new ArrayList<Compra>();
+        this.sacola = sacola;
+    }
+	
+	public Comprador(String nome, String cpf, double saldo, List<Compra> compras, Set<Produto> sacola) {
+		super(nome, saldo);
+        this.nome = nome;
+        this.cpf = cpf;
+        this.a_pagar = 0;
+        this.compras = compras;
+        this.sacola = sacola;
     }
 	
 	public void adicionarNaSacola(Vendedor vendedor, Mostruario produto, int quantidade) {

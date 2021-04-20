@@ -48,8 +48,8 @@ public class ListagemCompradorController implements Initializable {
 	
 	@FXML
     void clicouNaListagem(MouseEvent event) {
+		Sistema.compradorSelecionado = listagem.getSelectionModel().getSelectedItem();
 		CenaUtil.trocarCena(botaoVoltar, getClass(), "/app/views/TelaDadosComprador.fxml");
-        System.out.println("clicked on " + listagem.getSelectionModel().getSelectedItem());
     }
 
     @FXML
