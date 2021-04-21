@@ -99,9 +99,6 @@ public class DadosCompradorController implements Initializable {
 		campoPrecoSacola.setCellValueFactory(new PropertyValueFactory<Produto, Float>("preco"));
 		campoQtdSacola.setCellValueFactory(new PropertyValueFactory<Produto, Integer>("quantidade"));
 		
-		for (Compra x : Sistema.compradorSelecionado.compras)
-			System.out.println(x);
-		
 		compras = FXCollections.observableArrayList(Sistema.compradorSelecionado.compras);
 		listagemCompras.setItems(compras);
 		
