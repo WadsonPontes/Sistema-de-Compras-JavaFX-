@@ -31,7 +31,7 @@ public class MenuPrincipalController {
 	
 	@FXML
     void botaoSimularClicado(MouseEvent event) {
-    	CenaUtil.trocarCena(botaoSimular, getClass(), "/app/views/TelaSimulacao.fxml");
+    	CenaUtil.trocarCena(botaoSimular, getClass(), "/app/views/TelaSelecaoComprador.fxml");
 	}
     
     @FXML
