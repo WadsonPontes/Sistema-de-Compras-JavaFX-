@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.DadosCompradorController">
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controllers.DadosVendedorController">
    <right>
       <Pane prefHeight="500.0" prefWidth="900.0" BorderPane.alignment="CENTER">
          <children>
@@ -17,24 +17,24 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Label layoutX="310.0" layoutY="48.0" text="Dados do Comprador">
+            <Label layoutX="310.0" layoutY="48.0" text="Dados do Vendedor">
                <font>
                   <Font size="30.0" />
                </font>
             </Label>
-            <TableView id="listagemCompras" fx:id="listagemCompras" layoutX="28.0" layoutY="159.0" prefHeight="295.0" prefWidth="305.0">
+            <TableView id="listagemVendas" fx:id="listagemVendas" layoutX="28.0" layoutY="159.0" prefHeight="295.0" prefWidth="305.0">
               <columns>
-                <TableColumn id="campoVendedorCompra" fx:id="campoVendedorCompra" prefWidth="80.0" text="Vendedor" />
-                <TableColumn id="campoFormaCompra" fx:id="campoFormaCompra" prefWidth="80.0" text="Forma" />
-                <TableColumn id="campoProdutosCompra" fx:id="campoProdutosCompra" prefWidth="145.0" text="Produtos" />
+                <TableColumn id="campoCompradorVenda" fx:id="campoCompradorVenda" prefWidth="80.0" text="Comprador" />
+                <TableColumn id="campoFormaVenda" fx:id="campoFormaVenda" prefWidth="80.0" text="Forma" />
+                <TableColumn id="campoProdutosVenda" fx:id="campoProdutosVenda" prefWidth="145.0" text="Produtos" />
               </columns>
             </TableView>
-            <TableView id="listagemSacola" fx:id="listagemSacola" layoutX="569.0" layoutY="163.0" prefHeight="295.0" prefWidth="305.0">
+            <TableView id="listagemEstoque" fx:id="listagemEstoque" layoutX="569.0" layoutY="163.0" prefHeight="295.0" prefWidth="305.0">
               <columns>
-                <TableColumn id="campoCodigoSacola" fx:id="campoCodigoSacola" prefWidth="65.0" text="Código" />
-                <TableColumn id="campoNomeSacola" fx:id="campoNomeSacola" prefWidth="125.0" text="Nome" />
-                <TableColumn id="campoPrecoSacola" fx:id="campoPrecoSacola" prefWidth="65.0" text="Preço" />
-                <TableColumn id="campoQtdSacola" fx:id="campoQtdSacola" prefWidth="50.0" text="Qtd" />
+                <TableColumn id="campoCodigoEstoque" fx:id="campoCodigoEstoque" prefWidth="65.0" text="Código" />
+                <TableColumn id="campoNomeEstoque" fx:id="campoNomeEstoque" prefWidth="125.0" text="Nome" />
+                <TableColumn id="campoPrecoEstoque" fx:id="campoPrecoEstoque" prefWidth="65.0" text="Preço" />
+                <TableColumn id="campoQtdEstoque" fx:id="campoQtdEstoque" prefWidth="50.0" text="Qtd" />
               </columns>
             </TableView>
             <Label layoutX="352.0" layoutY="183.0" prefHeight="24.0" prefWidth="199.0" text="Nome:">
@@ -47,12 +47,12 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="354.0" layoutY="246.0" prefHeight="24.0" prefWidth="195.0" text="CPF:">
+            <Label layoutX="354.0" layoutY="246.0" prefHeight="24.0" prefWidth="195.0" text="CNPJ:">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label id="campoCPF" fx:id="campoCPF" layoutX="353.0" layoutY="266.0" prefHeight="24.0" prefWidth="195.0" text="">
+            <Label id="campoCNPJ" fx:id="campoCNPJ" layoutX="353.0" layoutY="266.0" prefHeight="24.0" prefWidth="195.0" text="">
                <font>
                   <Font size="15.0" />
                </font>
@@ -67,22 +67,22 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="355.0" layoutY="377.0" prefHeight="24.0" prefWidth="193.0" text="Valores a Pagar:">
+            <Label layoutX="355.0" layoutY="377.0" prefHeight="24.0" prefWidth="193.0" text="Valores a Receber:">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </Label>
-            <Label id="campoDevendo" fx:id="campoDevendo" layoutX="355.0" layoutY="397.0" prefHeight="24.0" prefWidth="193.0" text="">
+            <Label id="campoAReceber" fx:id="campoAReceber" layoutX="355.0" layoutY="397.0" prefHeight="24.0" prefWidth="193.0" text="">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="71.0" layoutY="127.0" text="Produtos Adquiridos">
+            <Label layoutX="71.0" layoutY="127.0" text="Vendas">
                <font>
                   <Font size="25.0" />
                </font>
             </Label>
-            <Label layoutX="605.0" layoutY="130.0" text="Carrinho de Compras">
+            <Label layoutX="605.0" layoutY="130.0" text="Produtos em Estoque">
                <font>
                   <Font size="25.0" />
                </font>

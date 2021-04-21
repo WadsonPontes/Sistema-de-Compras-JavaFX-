@@ -10,18 +10,19 @@ import app.enums.TipoFormaPagamento;
 // import app.views.Erro;
 import app.models.compra.*;
 import app.models.produto.Mostruario;
+import app.models.produto.Produto;
 
 public class Vendedor extends Pessoa {
 	public String cnpj;
 	public double a_receber;
-	public Set<Mostruario> produtos;
+	public Set<Produto> produtos;
 	public List<Compra> vendas;
 	
 	public Vendedor(String nome, String cnpj) {
 		super(nome);
 		this.cnpj = cnpj;
 		this.a_receber = 0;
-		this.produtos = new HashSet<Mostruario>();
+		this.produtos = new HashSet<Produto>();
 		this.vendas = new ArrayList<Compra>();
 	}
 	
@@ -109,11 +110,11 @@ public class Vendedor extends Pessoa {
 		this.a_receber = a_receber;
 	}
 
-	public Set<Mostruario> getProdutos() {
+	public Set<Produto> getProdutos() {
 		return produtos;
 	}
 
-	public void setProdutos(Set<Mostruario> produtos) {
+	public void setProdutos(Set<Produto> produtos) {
 		this.produtos = produtos;
 	}
 

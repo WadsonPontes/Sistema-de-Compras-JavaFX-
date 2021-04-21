@@ -18,6 +18,9 @@ Abra o projeto com o Eclipse
 - Listagem de Compradores
 - Listagem de Vendedores
 - Listagem de Produtos
+- Busca de Comprador por CPF
+- Busca de Comprador por CNPJ
+- Busca de Produto por Código
 - Simulação de um site de compras
 
 ## Autores
