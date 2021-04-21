@@ -31,7 +31,7 @@
                </font>
             </Label>
             
-            <TableView id="listagem" fx:id="listagem" layoutX="309.0" layoutY="150.0" prefHeight="295.0" prefWidth="305.0">
+            <TableView id="listagem" fx:id="listagem" layoutX="309.0" layoutY="150.0" onMouseClicked="#clicouNaListagem" prefHeight="295.0" prefWidth="305.0">
               <columns>
                 <TableColumn id="campoCodigo" fx:id="campoCodigo" prefWidth="65.0" text="Código" />
                 <TableColumn id="campoNome" fx:id="campoNome" prefWidth="125.0" text="Nome" />

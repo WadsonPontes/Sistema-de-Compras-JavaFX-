@@ -22,8 +22,10 @@ import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
 
+import app.enums.TipoFormaPagamento;
 import app.models.compra.Compra;
 import app.models.pessoa.Comprador;
+import app.models.pessoa.Vendedor;
 import app.models.produto.Produto;
 import app.utils.CenaUtil;
 
@@ -65,7 +67,10 @@ public class SelecaoProdutoController implements Initializable {
 	
 	@FXML
     void clicouNaListagem(MouseEvent event) {
-		
+		Sistema.produtoSelecionado = listagem.getSelectionModel().getSelectedItem();
+		Sistema.compradorSelecionado.adicionarNaSacola(Sistema.vendedorSelecionado, Sistema.produtoSelecionado, 1);
+		Sistema.compradorSelecionado.comprar(Sistema.vendedorSelecionado, TipoFormaPagamento.BOLETO);
+		CenaUtil.trocarCena(botaoVoltar, getClass(), "/app/views/TelaSelecaoComprador.fxml");
     }
 
     @FXML
