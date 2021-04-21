@@ -3,6 +3,15 @@ package app.models.produto;
 import app.utils.Serial;
 
 public class Produto extends Mostruario {
+	public Produto(Mostruario m) {
+		super();
+		this.id = m.id;
+		this.codigo = m.codigo;
+		this.nome = m.nome;
+		this.preco = m.preco;
+		this.quantidade = 1;
+	}
+	
 	public Produto(Mostruario m, int quantidade) {
 		super();
 		this.id = m.id;
