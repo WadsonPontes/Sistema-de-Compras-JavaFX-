@@ -39,8 +39,8 @@ public class Sistema {
 		Sistema.compradores.add(new Comprador("Wadson Pontes", "999.888.777-44", 13000.59, Sistema.compras, Sistema.produtos));
 		Sistema.compradores.add(new Comprador("Pontes", "111.888.777-44", 10000.59, Sistema.compras, Sistema.produtos));
 		Sistema.compradores.add(new Comprador("Souza", "222.888.777-44", 130000.59, Sistema.compras, Sistema.produtos));
-		Sistema.vendedores.add(new Vendedor("Wadson Vendendor", "50.266.711/0001-80"));
-		Sistema.vendedores.add(new Vendedor("Pontes Vendendor", "40.266.711/0001-80"));
-		Sistema.vendedores.add(new Vendedor("Souza Vendendor", "30.266.711/0001-80"));
+		Sistema.vendedores.add(new Vendedor("Wadson Vendendor", "50.266.711/0001-80", Sistema.produtos, Sistema.compras));
+		Sistema.vendedores.add(new Vendedor("Pontes Vendendor", "40.266.711/0001-80", Sistema.produtos, Sistema.compras));
+		Sistema.vendedores.add(new Vendedor("Souza Vendendor", "30.266.711/0001-80", Sistema.produtos, Sistema.compras));
 	}
 }

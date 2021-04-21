@@ -43,13 +43,13 @@ public class DadosVendedorController implements Initializable {
     private TableView<Compra> listagemVendas;
 
     @FXML
-    private TableColumn<Compra, String> campoCompradorCompra;
+    private TableColumn<Compra, String> campoCompradorVenda;
 
     @FXML
-    private TableColumn<Compra, String> campoFormaCompra;
+    private TableColumn<Compra, String> campoFormaVenda;
 
     @FXML
-    private TableColumn<Compra, String> campoProdutosCompra;
+    private TableColumn<Compra, String> campoProdutosVenda;
 
     @FXML
     private TableView<Produto> listagemEstoque;
@@ -90,19 +90,19 @@ public class DadosVendedorController implements Initializable {
 		campoSaldo.setText("R$ " + Sistema.vendedorSelecionado.saldo);
 		campoAReceber.setText("R$ " + Sistema.vendedorSelecionado.a_receber);
 		
-		//campoCompradorCompra.setCellValueFactory(new PropertyValueFactory<Compra, String>("cpf"));
-		//campoFormaCompra.setCellValueFactory(new PropertyValueFactory<Compra, String>("forma"));
-		//campoProdutosCompra.setCellValueFactory(new PropertyValueFactory<Compra, String>("produtos"));
+		campoCompradorVenda.setCellValueFactory(new PropertyValueFactory<Compra, String>("cpf"));
+		campoFormaVenda.setCellValueFactory(new PropertyValueFactory<Compra, String>("forma"));
+		campoProdutosVenda.setCellValueFactory(new PropertyValueFactory<Compra, String>("produtos"));
 
-		//campoCodigoEstoque.setCellValueFactory(new PropertyValueFactory<Produto, String>("codigo"));
-		//campoNomeEstoque.setCellValueFactory(new PropertyValueFactory<Produto, String>("nome"));
-		//campoPrecoEstoque.setCellValueFactory(new PropertyValueFactory<Produto, Float>("preco"));
-		//campoQtdEstoque.setCellValueFactory(new PropertyValueFactory<Produto, Integer>("quantidade"));
+		campoCodigoEstoque.setCellValueFactory(new PropertyValueFactory<Produto, String>("codigo"));
+		campoNomeEstoque.setCellValueFactory(new PropertyValueFactory<Produto, String>("nome"));
+		campoPrecoEstoque.setCellValueFactory(new PropertyValueFactory<Produto, Float>("preco"));
+		campoQtdEstoque.setCellValueFactory(new PropertyValueFactory<Produto, Integer>("quantidade"));
 		
-		//vendas = FXCollections.observableArrayList(Sistema.vendedorSelecionado.vendas);
-		//listagemVendas.setItems(vendas);
+		vendas = FXCollections.observableArrayList(Sistema.vendedorSelecionado.vendas);
+		listagemVendas.setItems(vendas);
 		
-		//estoque = FXCollections.observableArrayList(Sistema.vendedorSelecionado.produtos);
-		//listagemEstoque.setItems(estoque);
+		estoque = FXCollections.observableArrayList(Sistema.vendedorSelecionado.produtos);
+		listagemEstoque.setItems(estoque);
 	}
 }

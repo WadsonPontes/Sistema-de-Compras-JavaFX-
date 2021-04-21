@@ -26,6 +26,14 @@ public class Vendedor extends Pessoa {
 		this.vendas = new ArrayList<Compra>();
 	}
 	
+	public Vendedor(String nome, String cnpj, Set<Produto> produtos, List<Compra> vendas) {
+		super(nome);
+		this.cnpj = cnpj;
+		this.a_receber = 0;
+		this.produtos = produtos;
+		this.vendas = vendas;
+	}
+	
 	public void adicionarAPrateleira() {
 		
 	}
