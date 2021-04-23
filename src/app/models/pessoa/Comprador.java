@@ -42,7 +42,7 @@ public class Comprador extends Pessoa {
         this.cpf = cpf;
         this.a_pagar = 0;
         this.compras = new ArrayList<Compra>();
-        this.sacola = sacola;
+        this.sacola = new HashSet<Produto>(sacola);
     }
 	
 	public Comprador(String nome, String cpf, double saldo, List<Compra> compras, Set<Produto> sacola) {
@@ -50,8 +50,8 @@ public class Comprador extends Pessoa {
         this.nome = nome;
         this.cpf = cpf;
         this.a_pagar = 0;
-        this.compras = compras;
-        this.sacola = sacola;
+        this.compras = new ArrayList<Compra>(compras);
+        this.sacola = new HashSet<Produto>(sacola);
     }
 	
 	public void adicionarNaSacola(Vendedor vendedor, Mostruario produto, int quantidade) {
