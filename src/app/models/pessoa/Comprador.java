@@ -35,6 +35,15 @@ public class Comprador extends Pessoa {
         this.sacola = new HashSet<Produto>();
     }
 	
+	public Comprador(String nome, String cpf, double saldo, List<Compra> compras) {
+		super(nome, saldo);
+        this.nome = nome;
+        this.cpf = cpf;
+        this.a_pagar = 0;
+        this.compras = Compra.copiar(compras);
+        this.sacola = new HashSet<Produto>();
+    }
+	
 	public Comprador(String nome, String cpf, double saldo, Set<Produto> sacola) {
 		super(nome, saldo);
         this.nome = nome;
@@ -56,7 +65,6 @@ public class Comprador extends Pessoa {
 	public void adicionarNaSacola(Vendedor vendedor, Produto produto, int quantidade) {
 		if (vendedor.verificarEstoque(produto, quantidade)) {
 			this.sacola.add(new Produto(produto, quantidade));
-			vendedor.removerDaPrateleira(produto, quantidade);
 		}
 	}
 	
@@ -78,10 +86,10 @@ public class Comprador extends Pessoa {
 	
 	private void comprarPorPIX(Vendedor vendedor, TipoFormaPagamento forma) {
 		if (this.validarCompra(vendedor)) {
+			vendedor.vender(this, forma);
 			this.compras.add(new Compra(this.cpf, vendedor.cnpj, forma, this.sacola));
-			// vendedor.vender(this, forma);
 			this.pagarPorPIX(vendedor);
-			this.sacola = null;
+			this.sacola = new HashSet<Produto>();
 		}
 	}
 	

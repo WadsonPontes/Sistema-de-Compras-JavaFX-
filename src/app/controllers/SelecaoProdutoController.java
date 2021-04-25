@@ -69,7 +69,7 @@ public class SelecaoProdutoController implements Initializable {
     void clicouNaListagem(MouseEvent event) {
 		Sistema.produtoSelecionado = new Produto(listagem.getSelectionModel().getSelectedItem(), 1);
 		Sistema.compradorSelecionado.adicionarNaSacola(Sistema.vendedorSelecionado, Sistema.produtoSelecionado, 1);
-		Sistema.compradorSelecionado.comprar(Sistema.vendedorSelecionado, TipoFormaPagamento.BOLETO);
+		Sistema.compradorSelecionado.comprar(Sistema.vendedorSelecionado, TipoFormaPagamento.PIX);
 		CenaUtil.trocarCena(botaoVoltar, getClass(), "/app/views/TelaSelecaoVendedor.fxml");
     }
 

@@ -36,7 +36,7 @@ public class Sistema {
 		Sistema.compras.add(new Compra("999.888.777-44", "50.266.711/0001-80", TipoFormaPagamento.BOLETO, Sistema.produtos));
 		Sistema.compras.add(new Compra("111.888.777-44", "50.266.711/0001-80", TipoFormaPagamento.PIX, Sistema.produtos));
 		Sistema.compras.add(new Compra("222.888.777-44", "50.266.711/0001-80", TipoFormaPagamento.DEBITO, Sistema.produtos));
-		Sistema.compradores.add(new Comprador("Wadson Pontes", "999.888.777-44", 13000.59, Sistema.compras, Sistema.produtos));
+		Sistema.compradores.add(new Comprador("Wadson Pontes", "999.888.777-44", 13000.59, Sistema.compras));
 		Sistema.compradores.add(new Comprador("Pontes", "111.888.777-44", 10000.59, Sistema.compras, Sistema.produtos));
 		Sistema.compradores.add(new Comprador("Souza", "222.888.777-44", 130000.59, Sistema.compras, Sistema.produtos));
 		Sistema.vendedores.add(new Vendedor("Wadson Vendendor", "50.266.711/0001-80", Sistema.produtos, Sistema.compras));

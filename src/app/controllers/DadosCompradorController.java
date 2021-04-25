@@ -28,7 +28,6 @@ import java.util.Set;
 
 import app.models.compra.Compra;
 import app.models.pessoa.Comprador;
-import app.models.produto.Mostruario;
 import app.models.produto.Produto;
 import app.utils.CenaUtil;
 
