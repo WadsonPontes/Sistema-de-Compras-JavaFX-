@@ -30,8 +30,8 @@ public class Vendedor extends Pessoa {
 		super(nome);
 		this.cnpj = cnpj;
 		this.a_receber = 0;
-		this.produtos = produtos;
-		this.vendas = vendas;
+		this.produtos = Produto.copiar(produtos);
+		this.vendas = Compra.copiar(vendas);
 	}
 	
 	public void adicionarAPrateleira() {

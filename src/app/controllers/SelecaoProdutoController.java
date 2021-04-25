@@ -55,7 +55,7 @@ public class SelecaoProdutoController implements Initializable {
 	
 	@FXML
     void buscar(ActionEvent event) {
-		Set<Produto> filtrado = new HashSet<Produto>(Sistema.produtos);
+		Set<Produto> filtrado = new HashSet<Produto>(Sistema.vendedorSelecionado.produtos);
 		
 		if (!campoBusca.getText().equals("")) {
 			filtrado.removeIf(x -> !x.codigo.contains(campoBusca.getText()));
@@ -85,7 +85,7 @@ public class SelecaoProdutoController implements Initializable {
 		campoPreco.setCellValueFactory(new PropertyValueFactory<Produto, Float>("preco"));
 		campoQtd.setCellValueFactory(new PropertyValueFactory<Produto, Integer>("quantidade"));
 		
-		produtos = FXCollections.observableArrayList(Sistema.produtos);
+		produtos = FXCollections.observableArrayList(Sistema.vendedorSelecionado.produtos);
 		listagem.setItems(produtos);
 	}
 }

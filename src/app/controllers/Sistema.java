@@ -1,5 +1,6 @@
 package app.controllers;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -10,7 +11,6 @@ import app.enums.TipoFormaPagamento;
 import app.models.compra.Compra;
 import app.models.pessoa.Comprador;
 import app.models.pessoa.Vendedor;
-import app.models.produto.Mostruario;
 import app.models.produto.Produto;
 
 public class Sistema {
@@ -24,7 +24,7 @@ public class Sistema {
 	public static Vendedor vendedorSelecionado;
 	public static Produto produtoSelecionado;
 	
-	public static void inicializar() {
+	public static void inicializar() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		Sistema.produtos = new HashSet<Produto>();
 		Sistema.compras = new ArrayList<Compra>();
 		Sistema.compradores = new HashSet<Comprador>();

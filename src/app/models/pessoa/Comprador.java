@@ -7,7 +7,6 @@ import java.util.Objects;
 import java.util.Set;
 
 import app.enums.TipoFormaPagamento;
-import app.models.produto.Mostruario;
 // import app.views.Erro;
 import app.models.compra.*;
 import app.models.produto.Produto;
@@ -42,7 +41,7 @@ public class Comprador extends Pessoa {
         this.cpf = cpf;
         this.a_pagar = 0;
         this.compras = new ArrayList<Compra>();
-        this.sacola = new HashSet<Produto>(sacola);
+        this.sacola = Produto.copiar(sacola);
     }
 	
 	public Comprador(String nome, String cpf, double saldo, List<Compra> compras, Set<Produto> sacola) {
@@ -50,11 +49,11 @@ public class Comprador extends Pessoa {
         this.nome = nome;
         this.cpf = cpf;
         this.a_pagar = 0;
-        this.compras = new ArrayList<Compra>(compras);
-        this.sacola = new HashSet<Produto>(sacola);
+        this.compras = Compra.copiar(compras);
+        this.sacola = Produto.copiar(sacola);
     }
 	
-	public void adicionarNaSacola(Vendedor vendedor, Mostruario produto, int quantidade) {
+	public void adicionarNaSacola(Vendedor vendedor, Produto produto, int quantidade) {
 		if (vendedor.verificarEstoque(produto, quantidade)) {
 			this.sacola.add(new Produto(produto, quantidade));
 			vendedor.removerDaPrateleira(produto, quantidade);

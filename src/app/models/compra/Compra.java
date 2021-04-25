@@ -1,6 +1,8 @@
 package app.models.compra;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import app.enums.TipoFormaPagamento;
@@ -14,11 +16,19 @@ public class Compra extends Base {
 	public TipoFormaPagamento forma;
 	public Set<Produto> produtos;
 	
+	public Compra(Compra compra) {
+		this.cpf = compra.cpf;
+		this.cnpj = compra.cnpj;
+		this.forma = compra.forma;
+		this.produtos = Produto.copiar(compra.produtos);
+		Serial.gerarIdUnico(this);
+	}
+	
 	public Compra(String cpf, String cnpj, TipoFormaPagamento forma, Set<Produto> produtos) {
 		this.cpf = cpf;
 		this.cnpj = cnpj;
 		this.forma = forma;
-		this.produtos = produtos;
+		this.produtos = Produto.copiar(produtos);
 		Serial.gerarIdUnico(this);
 	}
 	
@@ -72,5 +82,18 @@ public class Compra extends Base {
 
 	public void setProdutos(Set<Produto> produtos) {
 		this.produtos = produtos;
+	}
+	
+	public static List<Compra> copiar(List<Compra> compras) {
+		List<Compra> copias = new ArrayList<Compra>();
+		
+		if (compras != null) {
+			for (Compra compra : compras) {
+				Compra copia = new Compra(compra);
+				copias.add(copia);
+			}
+		}
+		
+		return copias;
 	}
 }
